@@ -1,4 +1,4 @@
-# Introducción a Wollok Game
+## Introducción a Wollok Game
 
 ### El tablero
 Para poder generar el tablero de juego en el proyecto de Wollok, vamos a crear, dentro de la carpeta "src", un nuevo archivo (podría llamarse "program.wpgm") que será un Programa Wollok.
