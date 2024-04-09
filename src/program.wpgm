@@ -1,0 +1,22 @@
+import wollok.game.*
+import auto.*
+
+program miPrimerWollokGame {
+	game.width(14);
+	game.height(8);
+	game.boardGround("empedrado.jpg");
+	game.addVisual(auto);
+  	keyboard.up().onPressDo {
+  		auto.subir();
+  	}
+  	keyboard.down().onPressDo {
+  		auto.bajar();
+  	}
+  	keyboard.right().onPressDo {
+  		auto.moverDerecha();
+  	}
+  	keyboard.left().onPressDo {
+  		auto.moverIzquierda();
+  	}
+	game.start();
+}
