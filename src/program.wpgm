@@ -1,11 +1,15 @@
 import wollok.game.*
 import auto.*
+import pared.*
 
 program miPrimerWollokGame {
+	game.title("Autito chocador")
 	game.width(14);
 	game.height(8);
 	game.boardGround("empedrado.jpg");
 	game.addVisual(auto);
+	game.addVisual(pared)
+	game.say(auto, "para cambiar de color toca la tecla space")
   	keyboard.up().onPressDo {
   		auto.subir();
   	}
@@ -17,6 +21,9 @@ program miPrimerWollokGame {
   	}
   	keyboard.left().onPressDo {
   		auto.moverIzquierda();
+  	}
+  	keyboard.space().onPressDo{
+  		auto.cambiarDeColor();
   	}
 	game.start();
 }
