@@ -6,7 +6,7 @@ program miPrimerWollokGame {
 	game.title("Autito chocador")
 	game.width(14);
 	game.height(8);
-	game.boardGround("empedrado.jpg");
+	game.boardGround("assets/empedrado.jpg");
 	game.addVisual(auto);
 	game.addVisual(pared)
 	game.say(auto, "para cambiar de color toca la tecla space")
