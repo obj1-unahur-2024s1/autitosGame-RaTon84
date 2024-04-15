@@ -1,15 +1,35 @@
 import wollok.game.*
 import auto.*
-import pared.*
+import meteoro.*
 
 program miPrimerWollokGame {
-	game.title("Autito chocador")
+	/*titulo */
+	game.title("Autito chocador");
+	/*tablero */
 	game.width(14);
 	game.height(8);
+	
+	/*fondo */
 	game.boardGround("assets/empedrado.jpg");
+	
+	/*elementos visuales */
 	game.addVisual(auto);
-	game.addVisual(pared)
-	game.say(auto, "para cambiar de color toca la tecla space")
+	game.addVisual(meteoro);
+	
+	/*mensajes */
+	game.say(auto, "para cambiar de color toca la tecla space");
+	
+	/*colisiones */
+	game.whenCollideDo(auto, {
+		e => auto.choca()
+		game.say(auto,"Chocaste! 
+		Intentalo de nuevo")	
+	});
+	
+	/*mover caja */
+	meteoro.caeCada(300);
+	
+	/*configuracion de teclas */
   	keyboard.up().onPressDo {
   		auto.subir();
   	}

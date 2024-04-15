@@ -38,4 +38,7 @@ object auto {
 			image="autitoAzul.png"
 		}else{image="autitoRojo.png"}
 	}
+	method choca(){
+		self.posicion(game.at(0,0))
+	}
 }
